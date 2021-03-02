@@ -1,4 +1,4 @@
-call plug#begin('$LOCALAPPDATA\nvim\plugins')
+call plug#begin('$XDG_CONFIG_HOME\nvim\plugins')
 
 " OneDark theme
 Plug 'joshdick/onedark.vim'
@@ -14,11 +14,13 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" tpope stuff
-Plug 'tpope/vim-fugitive'
-
 " Status bar
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='onedark'
+
+" tpope stuff
+Plug 'tpope/vim-fugitive'
 
 " NERD stuff 
 Plug 'preservim/nerdtree'
@@ -57,6 +59,9 @@ let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 
+" coc.nvim
+nmap <silent> <leader>gd <Plug>(cod-definition)
+
 
 set encoding=UTF-8
 set number
@@ -88,4 +93,4 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 
-let $CONFIG="$LOCALAPPDATA\\nvim\\init.vim"
+let $CONFIG="$XDG_CONFIG_HOME\\nvim\\init.vim"
