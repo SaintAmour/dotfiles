@@ -22,6 +22,9 @@ let g:airline_theme='onedark'
 " tpope stuff
 Plug 'tpope/vim-fugitive'
 
+" Git stuff
+Plug 'airblade/vim-gitgutter'
+
 " NERD stuff 
 Plug 'preservim/nerdtree'
 
@@ -59,8 +62,9 @@ let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 
-" coc.nvim
-nmap <silent> <leader>gd <Plug>(cod-definition)
+" Enable preview window for FZF
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']}, <bang>0)
 
 
 set encoding=UTF-8
@@ -70,11 +74,20 @@ set smartcase
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set splitbelow
+set splitright
+
+let mapleader=(' ')
 
 
 " Mappings
 imap jk <Esc>
 tnoremap jk <Esc>
+nnoremap <silent><leader>v :vsplit<CR>
+nnoremap <silent><leader>h :split<CR>
+nnoremap <silent><leader>f :Files<CR>
+nnoremap <silent><C-P> :History<CR>
+nnoremap <leader>d :Rg <space>
 
 " Use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -92,5 +105,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" coc.nvim
+nmap <silent> <leader>gd <Plug>(cod-definition)
 
 let $CONFIG="$XDG_CONFIG_HOME\\nvim\\init.vim"
