@@ -85,6 +85,10 @@ imap jk <Esc>
 tnoremap jk <Esc>
 nnoremap <silent><leader>v :vsplit<CR>
 nnoremap <silent><leader>h :split<CR>
+
+" Paste from clipboard
+nnoremap pp "+p
+
 nnoremap <silent><leader>f :Files<CR>
 nnoremap <silent><C-P> :History<CR>
 nnoremap <leader>d :Rg <space>
