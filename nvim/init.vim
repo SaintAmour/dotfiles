@@ -83,12 +83,15 @@ let mapleader=(' ')
 " Mappings
 imap jk <Esc>
 tnoremap jk <Esc>
+
+" Easy v an h split
 nnoremap <silent><leader>v :vsplit<CR>
 nnoremap <silent><leader>h :split<CR>
 
 " Paste from clipboard
 nnoremap pp "+p
 
+" FZF mappings
 nnoremap <silent><leader>f :Files<CR>
 nnoremap <silent><C-P> :History<CR>
 nnoremap <leader>d :Rg <space>
