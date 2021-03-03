@@ -22,6 +22,7 @@ let g:airline_theme='onedark'
 " tpope stuff
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " Git stuff
 Plug 'airblade/vim-gitgutter'
