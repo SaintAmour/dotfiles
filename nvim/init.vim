@@ -73,8 +73,8 @@ set encoding=UTF-8
 set number
 set autochdir
 set smartcase
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set splitbelow
 set splitright
