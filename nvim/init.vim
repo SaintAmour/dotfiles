@@ -90,8 +90,10 @@ tnoremap jk <Esc>
 nnoremap <silent><leader>v :vsplit<CR>
 nnoremap <silent><leader>h :split<CR>
 
+" Copy to clipboard
+vnoremap <silent><leader>y "+y
 " Paste from clipboard
-nnoremap pp "+p
+nnoremap <silent><leader>p "+p
 
 " FZF mappings
 nnoremap <silent><leader>f :Files<CR>
