@@ -83,7 +83,7 @@ let mapleader=(' ')
 
 
 " Mappings
-imap jk <Esc>
+inoremap jk <Esc>
 tnoremap jk <Esc>
 
 " Easy v an h split
