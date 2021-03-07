@@ -5,7 +5,7 @@ Plug 'joshdick/onedark.vim'
 
 " Language client
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensiosn = ['coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-python', 'coc-java']
+
 " Typescript highlighting
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -15,9 +15,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='onedark'
+Plug 'itchyny/lightline.vim'
 
 " tpope stuff
 Plug 'tpope/vim-fugitive'
@@ -50,6 +48,10 @@ if (empty($TMUX))
   endif
 endif
 
+" Status line theme
+let g:lightline = { 'colorscheme': 'onedark', }
+
+let g:coc_global_extensiosn = ['coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-python', 'coc-java']
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -68,7 +70,6 @@ let g:NERDCompactSexyComs = 1
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']}, <bang>0)
 
-
 set encoding=UTF-8
 set number
 set autochdir
@@ -78,6 +79,11 @@ set shiftwidth=4
 set expandtab
 set splitbelow
 set splitright
+
+
+" Change text color of Coc error message
+highlight CocErrorFloat ctermfg=White
+
 
 let mapleader=(' ')
 
