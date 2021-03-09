@@ -92,6 +92,10 @@ let mapleader=(' ')
 inoremap jk <Esc>
 tnoremap jk <Esc>
 
+" Use Ctrl + j/k to page down/up
+nnoremap <C-j> <C-f>
+nnoremap <C-k> <C-b>
+
 " Easy v an h split
 nnoremap <silent><leader>v :vsplit<CR>
 nnoremap <silent><leader>h :split<CR>
