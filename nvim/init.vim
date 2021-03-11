@@ -103,9 +103,9 @@ nnoremap <silent><leader>v :vsplit<CR>
 nnoremap <silent><leader>h :split<CR>
 
 " Copy to clipboard
-vnoremap <silent><leader>y "+y
+vnoremap <silent><leader>y "*y
 " Paste from clipboard
-nnoremap <silent><leader>p "+p
+nnoremap <silent><leader>p "*p
 
 " FZF mappings
 nnoremap <silent><leader>f :Files<CR>
