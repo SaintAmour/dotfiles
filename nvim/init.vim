@@ -20,13 +20,13 @@ Plug 'itchyny/lightline.vim'
 " tpope stuff
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " Git stuff
 Plug 'airblade/vim-gitgutter'
 
 " NERD stuff 
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
