@@ -31,6 +31,7 @@ Plug 'preservim/nerdtree'
 call plug#end()
 
 
+syntax on
 colorscheme onedark
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -56,11 +57,6 @@ let g:coc_global_extensiosn = ['coc-css', 'coc-html', 'coc-json', 'coc-tsserver'
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
-
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = 'v'
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
