@@ -88,7 +88,7 @@ let mapleader=(' ')
 
 " Mappings
 inoremap jk <Esc>
-tnoremap jk <Esc>
+tnoremap jk <C-\><C-n>
 
 " Use Ctrl + j/k to page down/up
 nnoremap <C-j> <C-f>
