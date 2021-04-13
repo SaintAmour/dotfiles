@@ -77,6 +77,7 @@ set shiftwidth=4
 set expandtab
 set splitbelow
 set splitright
+set noswapfile
 
 
 " Change text color of Coc error message
