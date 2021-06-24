@@ -53,6 +53,9 @@ set shiftwidth=4
 " Set tab width to 4 columns
 set tabstop=4
 
+" Set tab width when editing to 4 columns
+set softtabstop=4
+
 " Use spaces for tabs
 set expandtab
 
@@ -110,6 +113,9 @@ set splitright
 
 " Change directory with file in buffer
 "set autochdir
+
+" Give backspace normal behavior
+set backspace=indent,eol,start
 
 
 
