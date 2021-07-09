@@ -112,7 +112,7 @@ set splitbelow
 set splitright
 
 " Change directory with file in buffer
-"set autochdir
+set autochdir
 
 " Give backspace normal behavior
 set backspace=indent,eol,start
